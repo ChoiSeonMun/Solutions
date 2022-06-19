@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MyVector">
+      <UniqueIdentifier>{017ff05e-ce4d-4aac-b6d2-04cc155d7900}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1번 문제">
+      <UniqueIdentifier>{270de9a2-dda8-48f4-a38a-ebc4474d97e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2번 문제">
+      <UniqueIdentifier>{53a3dd2c-bbda-4dec-8f9b-b004d50f9273}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3번 문제">
+      <UniqueIdentifier>{009b4691-744f-4782-abc2-0aff1d51b67a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MyVector.cpp">
+      <Filter>MyVector</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>MyVector</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution03.cpp">
+      <Filter>3번 문제</Filter>
+    </ClCompile>
+    <ClCompile Include="MyVector2.cpp">
+      <Filter>2번 문제</Filter>
+    </ClCompile>
+    <ClCompile Include="Test.cpp">
+      <Filter>2번 문제</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyVector.h">
+      <Filter>MyVector</Filter>
+    </ClInclude>
+    <ClInclude Include="MyTemplateVector.h">
+      <Filter>1번 문제</Filter>
+    </ClInclude>
+    <ClInclude Include="MyVector2.h">
+      <Filter>2번 문제</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
