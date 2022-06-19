@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ForwardList">
+      <UniqueIdentifier>{90ecb78a-11da-447c-aecb-f77ca07f942f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="List">
+      <UniqueIdentifier>{b4e6a8ba-ccad-4cc6-b9a2-0e6e57d0732b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1번 문제">
+      <UniqueIdentifier>{6f5c721d-bd46-4f45-b4d0-6e80923cd7af}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ForwardList.cpp">
+      <Filter>ForwardList</Filter>
+    </ClCompile>
+    <ClCompile Include="ForwardListTest.cpp">
+      <Filter>ForwardList</Filter>
+    </ClCompile>
+    <ClCompile Include="List.cpp">
+      <Filter>List</Filter>
+    </ClCompile>
+    <ClCompile Include="ListTest.cpp">
+      <Filter>List</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution01-1.cpp">
+      <Filter>1번 문제</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution01-2.cpp">
+      <Filter>1번 문제</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ForwardList.h">
+      <Filter>ForwardList</Filter>
+    </ClInclude>
+    <ClInclude Include="List.h">
+      <Filter>List</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
