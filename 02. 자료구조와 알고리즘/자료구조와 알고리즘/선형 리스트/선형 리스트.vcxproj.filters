@@ -22,7 +22,7 @@
     <ClCompile Include="MyVector.cpp">
       <Filter>MyVector</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="MyVectorTest.cpp">
       <Filter>MyVector</Filter>
     </ClCompile>
     <ClCompile Include="Solution03.cpp">

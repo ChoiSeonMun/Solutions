@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MyVectorTest.cpp" />
     <ClCompile Include="MyVector.cpp" />
     <ClCompile Include="MyVector2.cpp" />
     <ClCompile Include="Solution03.cpp" />
