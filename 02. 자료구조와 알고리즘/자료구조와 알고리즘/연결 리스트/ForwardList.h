@@ -102,5 +102,4 @@ public:
 	bool				contains(int value) const;
 private:
 	Node* _head = new Node();
-	Node* _end = new Node();
 };

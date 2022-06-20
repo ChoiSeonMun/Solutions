@@ -81,7 +81,5 @@ int main()
 		cout << elem << ' ';
 	}
 	cout << endl;
-
-	return 0;
 }
 #endif

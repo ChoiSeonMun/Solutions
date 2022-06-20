@@ -4,7 +4,6 @@
 
 ForwardList::ForwardList()
 {
-	_head->Next = _end;
 }
 
 ForwardList::ForwardList(size_t count)
@@ -32,7 +31,6 @@ ForwardList& ForwardList::operator=(const ForwardList& rhs)
 	{
 		ForwardList temp(rhs);
 		std::swap(_head, temp._head);
-		std::swap(_end, temp._end);
 	}
 
 	return *this;
@@ -44,9 +42,6 @@ ForwardList::~ForwardList()
 
 	delete _head;
 	_head = nullptr;
-
-	delete _end;
-	_end = nullptr;
 }
 
 int& ForwardList::front()
@@ -87,12 +82,12 @@ ForwardList::const_iterator ForwardList::begin() const
 
 ForwardList::iterator ForwardList::end()
 {
-	return iterator(_end);
+	return iterator(nullptr);
 }
 
 ForwardList::const_iterator ForwardList::end() const
 {
-	return const_iterator(_end);
+	return const_iterator(nullptr);
 }
 
 ForwardList::iterator ForwardList::insert_after(const_iterator pos, int value)
@@ -110,14 +105,10 @@ ForwardList::iterator ForwardList::erase_after(const_iterator pos)
 	Node* where = pos._p;
 	Node* removed = where->Next;
 
-	if (removed == nullptr)
-	{
-		return end();
-	}
-
 	where->Next = removed->Next;
+	delete removed;
 
-	return removed;
+	return where->Next;
 }
 
 void ForwardList::push_front(int value)
@@ -127,13 +118,12 @@ void ForwardList::push_front(int value)
 
 void ForwardList::pop_front()
 {
-	iterator removed = erase_after(before_begin());
-	delete removed._p;
+	erase_after(before_begin());
 }
 
 bool ForwardList::empty() const
 {
-	if (_head->Next == _end)
+	if (begin() == end())
 	{
 		return true;
 	}
