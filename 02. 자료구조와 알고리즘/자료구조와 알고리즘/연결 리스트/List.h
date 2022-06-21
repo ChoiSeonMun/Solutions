@@ -56,7 +56,7 @@ public:
 	};
 
 	// 기본 생성자
-	List() = default;
+	List();
 
 	// count만큼의 요소를 갖고 있는 컨테이너를 만드는 생성자
 	explicit List(size_t count);
@@ -87,13 +87,10 @@ public:
 	iterator			end();
 	const_iterator		end() const;
 
-	// pos 다음에 value를 삽입한다.
-	// 삽입된 요소를 가리키는 반복자를 반환한다.
+	// pos 이전에 value를 삽입한다.
 	iterator			insert(iterator pos, int value);
 
-	// pos 다음 요소를 삭제한다.
-	// 삭제된 요소의 다음 요소를 가리키는 반복자를 반환한다.
-	// 아무 요소도 없으면 end()를 반환한다.
+	// pos 요소를 삭제한다.
 	iterator			erase(iterator pos);
 
 	// 시작에 value를 삽입한다.
@@ -120,7 +117,6 @@ public:
 	// 해당 value가 있는지 체크한다.
 	bool			contains(int value) const;
 private:
-	Node* _end = new Node();
-	Node* _head = _end;
-	size_t			_size = 0;
+	Node*	_end = new Node();
+	size_t	_size = 0;
 };

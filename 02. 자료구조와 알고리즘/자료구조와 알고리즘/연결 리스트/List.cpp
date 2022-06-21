@@ -31,7 +31,9 @@ const int* List::const_iterator::operator->() const
 
 List::const_iterator& List::const_iterator::operator++()
 {
-	_p = _p->Next; return *this;
+	_p = _p->Next;
+	
+	return *this;
 }
 
 List::const_iterator List::const_iterator::operator++(int)
@@ -117,6 +119,12 @@ List::iterator List::iterator::operator--(int)
 	return temp;
 }
 
+List::List()
+{
+	_end->Next = _end;
+	_end->Prev = _end;
+}
+
 List::List(size_t count)
 	: List()
 {
@@ -127,6 +135,7 @@ List::List(size_t count)
 }
 
 List::List(const List& other)
+	: List()
 {
 	for (auto iter = other.begin(); iter != other.end(); ++iter)
 	{
@@ -139,7 +148,6 @@ List& List::operator=(const List& rhs)
 	if (this != &rhs)
 	{
 		List temp(rhs);
-		std::swap(_head, temp._head);
 		std::swap(_end, temp._end);
 		std::swap(_size, temp._size);
 	}
@@ -150,8 +158,6 @@ List& List::operator=(const List& rhs)
 List::~List()
 {
 	clear();
-
-	_head = nullptr;
 
 	delete _end;
 	_end = nullptr;
@@ -179,12 +185,12 @@ const int& List::back() const
 
 List::iterator List::begin()
 {
-	return iterator(_head);
+	return iterator(_end->Next);
 }
 
 List::const_iterator List::begin() const
 {
-	return const_iterator(_head);
+	return const_iterator(_end->Next);
 }
 
 List::iterator List::end()
@@ -199,22 +205,12 @@ List::const_iterator List::end() const
 
 List::iterator List::insert(iterator pos, int value)
 {
-	Node* where = pos._p;
-	Node* newNode = new Node(value);
-	Node* prevNode = where->Prev;
+	Node* nextNode = pos._p;
+	Node* prevNode = pos._p->Prev;
+	Node* newNode = new Node(value, prevNode, nextNode);
 
-	where->Prev = newNode;
-	if (prevNode)
-	{
-		prevNode->Next = newNode;
-	}
-	newNode->Prev = prevNode;
-	newNode->Next = where;
-
-	if (where == _head)
-	{
-		_head = newNode;
-	}
+	prevNode->Next = newNode;
+	nextNode->Prev = newNode;
 
 	++_size;
 
@@ -223,34 +219,18 @@ List::iterator List::insert(iterator pos, int value)
 
 List::iterator List::erase(iterator pos)
 {
-	if (empty())
-	{
-		return end();
-	}
+	Node* removed = pos._p;
+	Node* removedPrev = removed->Prev;
+	Node* removedNext = removed->Next;
 
-	Node* where = pos._p;
-	Node* prev = where->Prev;
-	Node* next = where->Next;
+	removedPrev->Next = removedNext;
+	removedNext->Prev = removedPrev;
 
-	if (prev)
-	{
-		prev->Next = next;
-	}
-	if (next)
-	{
-		next->Prev = prev;
-	}
-
-	if (where == _head)
-	{
-		_head = next;
-	}
-
-	delete where;
+	delete removed;
 
 	--_size;
 
-	return next;
+	return removedNext;
 }
 
 void List::push_front(int value)
