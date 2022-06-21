@@ -30,7 +30,7 @@ ForwardList& ForwardList::operator=(const ForwardList& rhs)
 	if (this != &rhs)
 	{
 		ForwardList temp(rhs);
-		std::swap(_head, temp._head);
+		std::swap(_beforeBegin, temp._beforeBegin);
 	}
 
 	return *this;
@@ -40,8 +40,8 @@ ForwardList::~ForwardList()
 {
 	clear();
 
-	delete _head;
-	_head = nullptr;
+	delete _beforeBegin;
+	_beforeBegin = nullptr;
 }
 
 int& ForwardList::front()
@@ -56,12 +56,12 @@ const int& ForwardList::front() const
 
 ForwardList::iterator ForwardList::before_begin()
 {
-	return iterator(_head);
+	return iterator(_beforeBegin);
 }
 
 ForwardList::const_iterator ForwardList::before_begin() const
 {
-	return const_iterator(_head);
+	return const_iterator(_beforeBegin);
 }
 
 ForwardList::iterator ForwardList::begin()

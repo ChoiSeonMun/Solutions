@@ -82,8 +82,6 @@ public:
 	iterator			insert_after(const_iterator pos, int value);
 
 	// pos 다음 요소를 삭제한다.
-	// 삭제된 요소의 다음 요소를 가리키는 반복자를 반환한다.
-	// 아무 요소도 없으면 end()를 반환한다.
 	iterator			erase_after(const_iterator pos);
 
 	// 시작 요소에 value를 삽입한다.
@@ -101,5 +99,5 @@ public:
 	// value가 있는지 검사한다.
 	bool				contains(int value) const;
 private:
-	Node* _head = new Node();
+	Node* _beforeBegin = new Node();
 };
