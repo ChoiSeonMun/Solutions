@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "이진 검색", "이진 검
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "그래프", "그래프\그래프.vcxproj", "{1DD1DEE1-23AB-4D0C-B22C-75BEADE340F1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "트리", "트리\트리.vcxproj", "{F6D110F3-6C5E-459D-A4FE-97E461940631}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{1DD1DEE1-23AB-4D0C-B22C-75BEADE340F1}.Release|x64.Build.0 = Release|x64
 		{1DD1DEE1-23AB-4D0C-B22C-75BEADE340F1}.Release|x86.ActiveCfg = Release|Win32
 		{1DD1DEE1-23AB-4D0C-B22C-75BEADE340F1}.Release|x86.Build.0 = Release|Win32
+		{F6D110F3-6C5E-459D-A4FE-97E461940631}.Debug|x64.ActiveCfg = Debug|x64
+		{F6D110F3-6C5E-459D-A4FE-97E461940631}.Debug|x64.Build.0 = Debug|x64
+		{F6D110F3-6C5E-459D-A4FE-97E461940631}.Debug|x86.ActiveCfg = Debug|Win32
+		{F6D110F3-6C5E-459D-A4FE-97E461940631}.Debug|x86.Build.0 = Debug|Win32
+		{F6D110F3-6C5E-459D-A4FE-97E461940631}.Release|x64.ActiveCfg = Release|x64
+		{F6D110F3-6C5E-459D-A4FE-97E461940631}.Release|x64.Build.0 = Release|x64
+		{F6D110F3-6C5E-459D-A4FE-97E461940631}.Release|x86.ActiveCfg = Release|Win32
+		{F6D110F3-6C5E-459D-A4FE-97E461940631}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
