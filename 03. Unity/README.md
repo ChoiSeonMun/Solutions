@@ -17,7 +17,5 @@ Unity 프로젝트 기획서는 아래와 같은 양식으로
 
 ## 링크
 프로젝트가 완료된 후 `<a>` 태그의 `href` 속성에 관련된 링크를 작성합니다.
-<style> a { display: inline } </style>
-<span>
+
 <a href="https://www.youtube.com"><img src="https://img.shields.io/badge/Youtube-FF0000?style=for-the-badge&logo=Youtube&logoColor=white"></a>
-</span>
